@@ -1,0 +1,31 @@
+
+<fieldset>
+    <table border="1" ng-hide="mensaje == 'tabla'">
+
+        <legend>ENTIDADES BANCARIAS</legend>
+        <tr>
+            <td><strong>Id Entidad Bancaria</strong></td>
+            <td><strong>Nombre</strong></td>
+            <td><strong>Codigo Entidad</strong></td>
+            <td><strong>Fecha Creacion</strong></td>
+            <td><strong>Direccion</strong></td>
+            <td><strong>CIF</strong></td>
+            <td><strong>Accion</strong></td>
+        </tr>
+
+        <tr ng-repeat="entidadBancaria in entidadesBancarias | orderBy: 'idEntidad'">
+            <td><a href="#/entidadBancaria/{{entidadBancaria.idEntidadBancaria}}">{{entidadBancaria.idEntidadBancaria}}</a></td>
+            <td>{{entidadBancaria.nombre}}</td>
+            <td>{{entidadBancaria.codigoEntidad}}</td>
+            <td>{{entidadBancaria.fechaCreacion | date: 'yyyy-MM-dd'}}</td>
+            <td>{{entidadBancaria.direccion}}</td>
+            <td>{{entidadBancaria.cif}}</td>
+            <td>
+                <a href="#/entidadBancaria/delete/{{entidadBancaria.idEntidadBancaria}}">Borrar</a>
+                <a href="#/entidadBancaria/update/{{entidadBancaria.idEntidadBancaria}}">Editar</a>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+<a href="#/entidad/insert">New Entidad Bancaria</a>
+

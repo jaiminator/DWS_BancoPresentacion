@@ -1,0 +1,31 @@
+
+<fieldset>
+    <table border="1">
+
+        <legend>SUCURSALES BANCARIAS</legend>
+        <tr>
+            <td><strong>Id Sucursal Bancaria</strong></td>
+            <td><strong>Nombre</strong></td>
+            <td><strong>Dirección</strong></td>
+            <td><strong>Director</strong></td>
+            <td><strong>Teléfono</strong></td>
+            <td><strong>Fecha Apertura</strong></td>
+            <td><strong>Accion</strong></td>
+        </tr>
+
+        <tr ng-repeat="sucursalBancaria in sucursalesBancarias | orderBy: 'idSucursal'">
+            <td><a href="#/sucursalBancaria/{{sucursalBancaria.idSucursalBancaria}}">{{sucursalBancaria.idSucursalBancaria}}</a></td>
+            <td>{{sucursalBancaria.nombreSucursal}}</td>
+            <td>{{sucursalBancaria.direccion}}</td>
+            <td>{{sucursalBancaria.director}}</td>
+            <td>{{sucursalBancaria.telefono}}</td>
+            <td>{{sucursalBancaria.fechaApertura}}</td>
+            <td>
+                <a href="#/sucursalBancaria/delete/{{sucursalBancaria.idSucursalBancaria}}">Borrar</a>
+                <a href="#/sucursalBancaria/update/{{sucursalBancaria.idSucursalBancaria}}">Editar</a>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+<a href="#/sucursal/insert">New Sucursal Bancaria</a>
+

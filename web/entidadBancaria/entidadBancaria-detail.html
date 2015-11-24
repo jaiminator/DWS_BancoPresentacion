@@ -1,0 +1,38 @@
+   <!--
+        <table border="1">
+            <tr>
+                <td><strong>Id Entidad Bancaria</strong></td>
+                <td><strong>Nombre</strong></td>
+                <td><strong>Codigo Entidad</strong></td>
+                <td><strong>Fecha Creacion</strong></td>
+                <td><strong>Direccion</strong></td>
+                <td><strong>CIF</strong></td>
+            </tr>
+            
+            <tr>
+                <td>{{entidadBancaria.idEntidadBancaria}}</td>
+                <td>{{entidadBancaria.nombre}}</td>
+                <td>{{entidadBancaria.codigoEntidad}}</td>
+                <td>{{entidadBancaria.fechaCreacion}}</td>
+                <td>{{entidadBancaria.direccion}}</td>
+                <td>{{entidadBancaria.cif}}</td>
+            </tr>
+        </table>
+-->
+
+
+<form>
+    <fieldset>
+        <legend>{{mensaje}}</legend>
+    IdEntidadBancaria: <input type="text" id="idEntidad" ng-disabled="true" name="idEntidad" ng-model="entidadBancaria.idEntidadBancaria"/><br>
+    Nombre: <input type="text" id="nombre" name="nombre" ng-model="entidadBancaria.nombre"/><br>
+    CodigoEntidad: <input type="text" id="codigoEntidad" name="codigoEntidad" ng-model="entidadBancaria.codigoEntidad"/><br>
+    FechaCreacion: <input type="text" id="fechaCreacion" name="fechaCreacion" ng-model="entidadBancaria.fechaCreacion"/><br>
+    Direccion: <input type="text" id="direccion" name="direccion" ng-model="entidadBancaria.direccion"/><br>
+    CIF: <input type="text" id="cif" name="cif" ng-model="entidadBancaria.cif"/><br><br>
+
+    <button id="boton" ng-click="aceptar()" value="">Aceptar</button>
+    </fieldset>
+</form>
+
+

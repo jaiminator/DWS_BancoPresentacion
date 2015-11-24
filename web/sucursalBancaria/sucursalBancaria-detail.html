@@ -1,0 +1,13 @@
+<form>
+    <fieldset>
+        <legend>{{mensaje}}</legend>
+    IdSucursalBancaria: <input type="text" id="idSucursal" ng-disabled="true" name="idSucursal" ng-model="sucursalBancaria.idSucursalBancaria"/><br>
+    Nombre: <input type="text" id="nombreSucursal" name="nombreSucursal" ng-model="sucursalBancaria.nombreSucursal"/><br>
+    Direccion: <input type="text" id="direccion" name="direccion" ng-model="sucursalBancaria.direccion"/><br>
+    Director: <input type="text" id="director" name="director" ng-model="sucursalBancaria.director"/><br>
+    Telefono: <input type="text" id="telefono" name="telefono" ng-model="sucursalBancaria.telefono"/><br>
+    Fecha Apertura: <input type="text" id="fechaApertura" name="fechaApertura" ng-model="sucursalBancaria.fechaApertura"/><br><br>
+
+    <button id="boton" ng-click="aceptar()" value="">Aceptar</button>
+    </fieldset>
+</form>
