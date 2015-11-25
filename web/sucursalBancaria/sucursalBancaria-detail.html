@@ -1,13 +1,24 @@
-<form>
+<form name="myForm">
     <fieldset>
         <legend>{{mensaje}}</legend>
     IdSucursalBancaria: <input type="text" id="idSucursal" ng-disabled="true" name="idSucursal" ng-model="sucursalBancaria.idSucursalBancaria"/><br>
-    Nombre: <input type="text" id="nombreSucursal" name="nombreSucursal" ng-model="sucursalBancaria.nombreSucursal"/><br>
-    Direccion: <input type="text" id="direccion" name="direccion" ng-model="sucursalBancaria.direccion"/><br>
-    Director: <input type="text" id="director" name="director" ng-model="sucursalBancaria.director"/><br>
-    Telefono: <input type="text" id="telefono" name="telefono" ng-model="sucursalBancaria.telefono"/><br>
-    Fecha Apertura: <input type="text" id="fechaApertura" name="fechaApertura" ng-model="sucursalBancaria.fechaApertura"/><br><br>
+    Nombre: <input type="text" id="nombreSucursal" name="nombreSucursal" ng-model="sucursalBancaria.nombreSucursal" required /><br>
+    Direccion: <input type="text" id="direccion" name="direccion" ng-model="sucursalBancaria.direccion" required /><br>
+    Director: <input type="text" id="director" name="director" ng-model="sucursalBancaria.director" required /><br>
+    Telefono: <input type="text" id="telefono" name="telefono" ng-model="sucursalBancaria.telefono" 
+                     ng-minlength="9" ng-maxlength="9" required /><br>
+    Fecha Apertura: <input type="text" id="fechaApertura" name="fechaApertura" ng-model="sucursalBancaria.fechaApertura" required /><br><br>
 
     <button id="boton" ng-click="aceptar()" value="">Aceptar</button>
     </fieldset>
 </form>
+
+<div id="cajaError" ng-show="show">
+    <span ng-show="myForm.nombreSucursal.$error.required"><b>NOMBRE:</b> El campo es requerido</span><br>
+    <span ng-show="myForm.direccion.$error.required"><b>DIRECCIÓN:</b> El campo es requerido</span><br>
+    <span ng-show="myForm.director.$error.required"><b>DIRECTOR:</b> El campo es requerido</span><br>
+    <span ng-show="myForm.telefono.$error.required"><b>TELÉFONO:</b> El campo es requerido</span>
+    <span ng-show="myForm.telefono.$error.minlength"><b>TELÉFONO:</b> El tamaño m&iacute;nimo requerido es 9</span>
+    <span ng-show="myForm.telefono.$error.maxlength"><b>TELÉFONO:</b> El tamaño m&aacute;ximo requerido es 9</span><br>
+    <span ng-show="myForm.fechaApertura.$error.required"><b>FECHA APERTURA:</b> El campo es requerido</span>
+</div>

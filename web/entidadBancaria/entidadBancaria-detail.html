@@ -21,15 +21,15 @@
 -->
 
 
-<form>
+<form name="myForm">
     <fieldset>
         <legend>{{mensaje}}</legend>
     IdEntidadBancaria: <input type="text" id="idEntidad" ng-disabled="true" name="idEntidad" ng-model="entidadBancaria.idEntidadBancaria"/><br>
-    Nombre: <input type="text" id="nombre" name="nombre" ng-model="entidadBancaria.nombre"/><br>
-    CodigoEntidad: <input type="text" id="codigoEntidad" name="codigoEntidad" ng-model="entidadBancaria.codigoEntidad"/><br>
-    FechaCreacion: <input type="text" id="fechaCreacion" name="fechaCreacion" ng-model="entidadBancaria.fechaCreacion"/><br>
-    Direccion: <input type="text" id="direccion" name="direccion" ng-model="entidadBancaria.direccion"/><br>
-    CIF: <input type="text" id="cif" name="cif" ng-model="entidadBancaria.cif"/><br><br>
+    Nombre: <input type="text" id="nombre" name="nombre" ng-model="entidadBancaria.nombre" required /><br>
+    CodigoEntidad: <input type="text" id="codigoEntidad" name="codigoEntidad" ng-model="entidadBancaria.codigoEntidad" required /><br>
+    FechaCreacion: <input type="text" id="fechaCreacion" name="fechaCreacion" ng-model="entidadBancaria.fechaCreacion" required /><br>
+    Direccion: <input type="text" id="direccion" name="direccion" ng-model="entidadBancaria.direccion" required /><br>
+    CIF: <input type="text" id="cif" name="cif" ng-model="entidadBancaria.cif" required /><br><br>
 
     <button id="boton" ng-click="aceptar()" value="">Aceptar</button>
     </fieldset>
