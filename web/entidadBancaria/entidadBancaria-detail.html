@@ -1,37 +1,28 @@
-   <!--
-        <table border="1">
-            <tr>
-                <td><strong>Id Entidad Bancaria</strong></td>
-                <td><strong>Nombre</strong></td>
-                <td><strong>Codigo Entidad</strong></td>
-                <td><strong>Fecha Creacion</strong></td>
-                <td><strong>Direccion</strong></td>
-                <td><strong>CIF</strong></td>
-            </tr>
-            
-            <tr>
-                <td>{{entidadBancaria.idEntidadBancaria}}</td>
-                <td>{{entidadBancaria.nombre}}</td>
-                <td>{{entidadBancaria.codigoEntidad}}</td>
-                <td>{{entidadBancaria.fechaCreacion}}</td>
-                <td>{{entidadBancaria.direccion}}</td>
-                <td>{{entidadBancaria.cif}}</td>
-            </tr>
-        </table>
--->
 
-
-<form name="myForm">
+<form class="form-inline" name="myForm">
     <fieldset>
         <legend>{{mensaje}}</legend>
-    IdEntidadBancaria: <input type="text" id="idEntidad" ng-disabled="true" name="idEntidad" ng-model="entidadBancaria.idEntidadBancaria"/><br>
-    Nombre: <input type="text" id="nombre" name="nombre" ng-model="entidadBancaria.nombre" required /><br>
-    CodigoEntidad: <input type="text" id="codigoEntidad" name="codigoEntidad" ng-model="entidadBancaria.codigoEntidad" required /><br>
-    FechaCreacion: <input type="text" id="fechaCreacion" name="fechaCreacion" ng-model="entidadBancaria.fechaCreacion" required /><br>
-    Direccion: <input type="text" id="direccion" name="direccion" ng-model="entidadBancaria.direccion" required /><br>
-    CIF: <input type="text" id="cif" name="cif" ng-model="entidadBancaria.cif" required /><br><br>
+        <h4>IdEntidadBancaria:</h4> <input class="form-control" type="text" id="idEntidad" ng-disabled="true" 
+                                    name="idEntidad" ng-model="entidadBancaria.idEntidadBancaria"/><br>
+        
+        <h4>Nombre:</h4> <input class="form-control" type="text" id="nombre" 
+                                name="nombre" ng-model="entidadBancaria.nombre" required /><br>
+        
+        <h4>CodigoEntidad:</h4> <input class="form-control" type="text" id="codigoEntidad" 
+                                       name="codigoEntidad" ng-model="entidadBancaria.codigoEntidad" required /><br>
+        
+        <h4>FechaCreacion:</h4> <input class="form-control" type="text" id="fechaCreacion" 
+                                       name="fechaCreacion" ng-model="entidadBancaria.fechaCreacion" required /><br>
+        
+        <h4>Direccion:</h4> <input class="form-control" type="text" id="direccion" 
+                                   name="direccion" ng-model="entidadBancaria.direccion" required /><br>
+        
+        <h4>CIF:</h4> <input class="form-control" type="text" id="cif" 
+                             name="cif" ng-model="entidadBancaria.cif" required /><br><br>
 
-    <button id="boton" ng-click="aceptar()" value="">Aceptar</button>
+        <button class="btn btn-success" id="accept" ng-click="aceptar()" value="">Aceptar</button>
+        <button class="btn btn-danger" id="cancel" ng-click="cancelar('/entidadBancaria/list')" value="">Cancelar</button>
+        <button class="btn btn-primary" id="return" ng-click="volver('/entidadBancaria/list')" value="">Volver</button>
     </fieldset>
 </form>
 

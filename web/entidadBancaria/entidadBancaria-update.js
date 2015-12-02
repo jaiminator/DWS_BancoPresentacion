@@ -2,6 +2,9 @@
 
 function UpdateEntidadController($scope, $routeParams, entidadBancariaService) {
     
+    var botonR = document.getElementById("return");
+    botonR.style.display = "none";
+    
     $scope.mensaje="ACTUALIZAR ENTIDAD BANCARIA";
 
     $scope.entidadBancaria = {
@@ -30,6 +33,10 @@ function UpdateEntidadController($scope, $routeParams, entidadBancariaService) {
         response.error(function (data, status, headers, config) {
             alert("Ha fallado la petición. Estado HTTP:" + status);
         });
+    };
+    
+    $scope.cancelar = function(path) {
+        window.history.back();
     };
     
 }

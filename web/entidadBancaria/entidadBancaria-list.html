@@ -1,8 +1,6 @@
 
-<fieldset>
+<h2>ENTIDADES BANCARIAS</h2>
     <table class="table">
-
-        <legend>ENTIDADES BANCARIAS</legend>
         <tr>
             <td><strong>Id Entidad Bancaria</strong></td>
             <td><strong>Nombre</strong></td>
@@ -21,11 +19,10 @@
             <td>{{entidadBancaria.direccion}}</td>
             <td>{{entidadBancaria.cif}}</td>
             <td>
-                <a href="#/entidadBancaria/delete/{{entidadBancaria.idEntidadBancaria}}">Borrar</a>
-                <a href="#/entidadBancaria/update/{{entidadBancaria.idEntidadBancaria}}">Editar</a>
+                <a class="btn btn-danger" href="#/entidadBancaria/delete/{{entidadBancaria.idEntidadBancaria}}">Borrar</a>
+                <a class="btn btn-primary" href="#/entidadBancaria/update/{{entidadBancaria.idEntidadBancaria}}">Editar</a>
             </td>
         </tr>
     </table>
-</fieldset>
-<a href="#/entidad/insert">New Entidad Bancaria</a>
+<a class="btn btn-primary" href="#/entidad/insert">NUEVA ENTIDAD</a>
 

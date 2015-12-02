@@ -1,8 +1,6 @@
 
-<fieldset>
-    <table border="1">
-
-        <legend>SUCURSALES BANCARIAS</legend>
+<h2>SUCURSALES BANCARIAS</h2>
+    <table class="table">
         <tr>
             <td><strong>Id Sucursal Bancaria</strong></td>
             <td><strong>Nombre</strong></td>
@@ -21,11 +19,10 @@
             <td>{{sucursalBancaria.telefono}}</td>
             <td>{{sucursalBancaria.fechaApertura}}</td>
             <td>
-                <a href="#/sucursalBancaria/delete/{{sucursalBancaria.idSucursalBancaria}}">Borrar</a>
-                <a href="#/sucursalBancaria/update/{{sucursalBancaria.idSucursalBancaria}}">Editar</a>
+                <a class="btn btn-danger" href="#/sucursalBancaria/delete/{{sucursalBancaria.idSucursalBancaria}}">Borrar</a>
+                <a class="btn btn-primary" href="#/sucursalBancaria/update/{{sucursalBancaria.idSucursalBancaria}}">Editar</a>
             </td>
         </tr>
     </table>
-</fieldset>
-<a href="#/sucursal/insert">New Sucursal Bancaria</a>
+<a class="btn btn-primary" href="#/sucursal/insert">NUEVA ENTIDAD</a>
 

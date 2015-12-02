@@ -1,6 +1,9 @@
 
 function InsertSucursalController($scope, sucursalBancariaService) {
     
+    var botonR = document.getElementById("return");
+    botonR.style.display = "none";
+    
     $scope.mensaje = "NUEVA SUCURSAL BANCARIA";
     
     $scope.show = false;
@@ -29,7 +32,10 @@ function InsertSucursalController($scope, sucursalBancariaService) {
         }
         
     };
-
+    
+    $scope.cancelar = function(path) {
+            window.history.back();
+    };
 
 }
 

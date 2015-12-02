@@ -1,6 +1,9 @@
 
 function InsertEntidadController($scope, entidadBancariaService) {
     
+    var botonR = document.getElementById("return");
+    botonR.style.display = "none";
+    
     $scope.mensaje = "NUEVA ENTIDAD BANCARIA";
 
     $scope.entidadBancaria = {
@@ -26,8 +29,11 @@ function InsertEntidadController($scope, entidadBancariaService) {
         }
         
     };
-
-
+    
+    $scope.cancelar = function(path) {
+            window.history.back();
+    };
+    
 }
 
 app.controller("InsertEntidadController", InsertEntidadController);

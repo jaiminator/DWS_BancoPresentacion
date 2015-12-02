@@ -1,19 +1,32 @@
-<form name="myForm">
+<form class="form-inline" name="myForm">
     <fieldset>
         <legend>{{mensaje}}</legend>
-    IdSucursalBancaria: <input type="text" id="idSucursal" ng-disabled="true" name="idSucursal" ng-model="sucursalBancaria.idSucursalBancaria"/><br>
-    Nombre: <input type="text" id="nombreSucursal" name="nombreSucursal" ng-model="sucursalBancaria.nombreSucursal" required /><br>
-    Direccion: <input type="text" id="direccion" name="direccion" ng-model="sucursalBancaria.direccion" required /><br>
-    Director: <input type="text" id="director" name="director" ng-model="sucursalBancaria.director" required /><br>
-    Telefono: <input type="text" id="telefono" name="telefono" ng-model="sucursalBancaria.telefono" 
-                     ng-minlength="9" ng-maxlength="9" required /><br>
-    Fecha Apertura: <input type="text" id="fechaApertura" name="fechaApertura" ng-model="sucursalBancaria.fechaApertura" required /><br><br>
+        <h4>IdSucursalBancaria:</h4> <input class="form-control" type="text" id="idSucursal" ng-disabled="true" 
+                                            name="idSucursal" ng-model="sucursalBancaria.idSucursalBancaria"/><br>
 
-    <button id="boton" ng-click="aceptar()" value="">Aceptar</button>
+        <h4>Nombre:</h4> <input class="form-control" type="text" id="nombreSucursal" 
+                                name="nombreSucursal" ng-model="sucursalBancaria.nombreSucursal" required /><br>
+
+        <h4>Direccion:</h4> <input class="form-control" type="text" id="direccion" 
+                                   name="direccion" ng-model="sucursalBancaria.direccion" required /><br>
+
+        <h4>Director:</h4> <input class="form-control" type="text" id="director" 
+                                  name="director" ng-model="sucursalBancaria.director" required /><br>
+
+        <h4>Telefono:</h4> <input class="form-control" type="text" id="telefono" 
+                                  name="telefono" ng-model="sucursalBancaria.telefono"
+                                  ng-minlength="9" ng-maxlength="9" required /><br>
+
+        <h4>Fecha Apertura:</h4> <input class="form-control" type="text" id="fechaApertura" 
+                                        name="fechaApertura" ng-model="sucursalBancaria.fechaApertura" required /><br><br>
+
+        <button class="btn btn-success" id="accept" ng-click="aceptar()" value="">Aceptar</button>
+        <button class="btn btn-danger" id="cancel" ng-click="cancelar('/entidadBancaria/list')" value="">Cancelar</button>
+        <button class="btn btn-primary" id="return" ng-click="volver('/entidadBancaria/list')" value="">Volver</button>
     </fieldset>
 </form>
 
-<div id="cajaError" ng-show="show">
+<!-- <div id="cajaError" ng-show="show">
     <span ng-show="myForm.nombreSucursal.$error.required"><b>NOMBRE:</b> El campo es requerido</span><br>
     <span ng-show="myForm.direccion.$error.required"><b>DIRECCIÓN:</b> El campo es requerido</span><br>
     <span ng-show="myForm.director.$error.required"><b>DIRECTOR:</b> El campo es requerido</span><br>
@@ -21,4 +34,4 @@
     <span ng-show="myForm.telefono.$error.minlength"><b>TELÉFONO:</b> El tamaño m&iacute;nimo requerido es 9</span>
     <span ng-show="myForm.telefono.$error.maxlength"><b>TELÉFONO:</b> El tamaño m&aacute;ximo requerido es 9</span><br>
     <span ng-show="myForm.fechaApertura.$error.required"><b>FECHA APERTURA:</b> El campo es requerido</span>
-</div>
+</div> -->

@@ -1,8 +1,10 @@
 
 function GetSucursalController($scope, $routeParams, sucursalBancariaService) {
 
-    var boton = document.getElementById("boton");
-    boton.style.display = "none";
+    var botonA = document.getElementById("accept");
+    botonA.style.display = "none";
+    var botonC = document.getElementById("cancel");
+    botonC.style.display = "none";
     
     $scope.mensaje="DETALLE SUCURSAL BANCARIA";
     
@@ -15,6 +17,10 @@ function GetSucursalController($scope, $routeParams, sucursalBancariaService) {
     response.error(function (data, status, headers, config) {
         alert("Ha fallado la petición. Estado HTTP:" + status);
     });
+    
+    $scope.volver = function(path) {
+        window.history.back();
+    };
     
 }
 

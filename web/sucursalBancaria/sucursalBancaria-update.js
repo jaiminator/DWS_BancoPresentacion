@@ -2,6 +2,9 @@
 
 function UpdateSucursalController($scope, $routeParams, sucursalBancariaService) {
     
+    var botonR = document.getElementById("return");
+    botonR.style.display = "none";
+    
     $scope.mensaje="ACTUALIZAR SUCURSAL BANCARIA";
 
     $scope.sucursalBancaria = {
@@ -30,6 +33,10 @@ function UpdateSucursalController($scope, $routeParams, sucursalBancariaService)
         response.error(function (data, status, headers, config) {
             alert("Ha fallado la petición. Estado HTTP:" + status);
         });
+    };
+    
+    $scope.cancelar = function(path) {
+        window.history.back();
     };
     
 }
