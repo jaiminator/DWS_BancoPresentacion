@@ -18,8 +18,9 @@ function GetEntidadController($scope, $routeParams, entidadBancariaService) {
         alert("Ha fallado la petición. Estado HTTP:" + status);
     });
     
-    $scope.volver = function(path) {
-        window.history.back();
+    $scope.volver = function() {
+//        window.history.back();
+        location.href = "#/entidadBancaria/list";
     };
     
 }

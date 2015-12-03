@@ -16,8 +16,9 @@ function DeleteEntidadController($scope, $routeParams, entidadBancariaService) {
 
     };
 
-    $scope.retornar = function (path) {
-        window.history.back();
+    $scope.retornar = function () {
+        // window.history.back();
+        location.href = "#/entidadBancaria/list";
     };
 
 }

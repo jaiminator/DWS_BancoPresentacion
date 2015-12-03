@@ -30,8 +30,9 @@ function InsertEntidadController($scope, entidadBancariaService) {
         
     };
     
-    $scope.cancelar = function(path) {
-            window.history.back();
+    $scope.cancelar = function() {
+//            window.history.back();
+        location.href = "#/entidadBancaria/list";
     };
     
 }

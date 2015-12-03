@@ -35,8 +35,9 @@ function UpdateSucursalController($scope, $routeParams, sucursalBancariaService)
         });
     };
     
-    $scope.cancelar = function(path) {
-        window.history.back();
+    $scope.cancelar = function() {
+//        window.history.back();
+        location.href = "#/sucursalBancaria/list";
     };
     
 }

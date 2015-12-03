@@ -18,8 +18,9 @@ function GetSucursalController($scope, $routeParams, sucursalBancariaService) {
         alert("Ha fallado la petición. Estado HTTP:" + status);
     });
     
-    $scope.volver = function(path) {
-        window.history.back();
+    $scope.volver = function() {
+//        window.history.back();
+        location.href = "#/sucursalBancaria/list";
     };
     
 }
