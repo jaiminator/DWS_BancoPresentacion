@@ -11,7 +11,7 @@
         <h4>CodigoEntidad:</h4> <input class="form-control" type="text" id="codigoEntidad" 
                                        name="codigoEntidad" ng-model="entidadBancaria.codigoEntidad" required /><br>
         
-        <h4>FechaCreacion:</h4> <input class="form-control" type="text" id="fechaCreacion" 
+        <h4>FechaCreacion:</h4> <input ui-date="{dateFormat:'dd/mm/yy'}" class="form-control" type="text" id="fechaCreacion" 
                                        name="fechaCreacion" ng-model="entidadBancaria.fechaCreacion" required /><br>
         
         <h4>Direccion:</h4> <input class="form-control" type="text" id="direccion" 
@@ -20,7 +20,7 @@
         <h4>CIF:</h4> <input class="form-control" type="text" id="cif" 
                              name="cif" ng-model="entidadBancaria.cif" required /><br><br>
 
-        <button class="btn btn-success" id="accept" ng-click="aceptar()" value="">Aceptar</button>
+        <button class="btn btn-success" ng-show="" id="accept" ng-click="aceptar()" value="">Aceptar</button>
         <button class="btn btn-danger" id="cancel" ng-click="cancelar()" value="">Cancelar</button>
         <button class="btn btn-primary" id="return" ng-click="volver()" value="">Volver</button>
     </fieldset>

@@ -8,6 +8,7 @@ function GetEntidadController($scope, $routeParams, entidadBancariaService) {
     
     $scope.mensaje="DETALLE ENTIDAD BANCARIA";
     
+    
     var response = entidadBancariaService.read($routeParams.idEntidadBancaria);
 
     response.success(function (data, status, headers, config) {
